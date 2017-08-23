@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		815F41131F4B86DB0001DBC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815F41121F4B86DB0001DBC9 /* main.m */; };
 		815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815F41151F4B86DB0001DBC9 /* AppDelegate.m */; };
-		815F41191F4B86DB0001DBC9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815F41181F4B86DB0001DBC9 /* LoginViewController.m */; };
 		815F411C1F4B86DB0001DBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815F411A1F4B86DB0001DBC9 /* Main.storyboard */; };
 		815F411E1F4B86DB0001DBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815F411D1F4B86DB0001DBC9 /* Assets.xcassets */; };
 		815F41211F4B86DB0001DBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815F411F1F4B86DB0001DBC9 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,9 @@
 		81977CE41F4D262300A12091 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE11F4D262200A12091 /* SpotifyMetadata.framework */; };
 		81977CE61F4D423400A12091 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE51F4D423400A12091 /* AVFoundation.framework */; };
 		81977CE81F4D423E00A12091 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE71F4D423E00A12091 /* SystemConfiguration.framework */; };
+		81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DC1F4D6265005AB90B /* LoginViewController.m */; };
+		81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */; };
+		81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		81FDECDB1F4D526E006CFFA5 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */; };
 		81FDECDC1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */; };
 		81FDECDD1F4D526E006CFFA5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCE1F4D526E006CFFA5 /* Montserrat-Bold.ttf */; };
@@ -52,8 +54,6 @@
 		815F41121F4B86DB0001DBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815F41141F4B86DB0001DBC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815F41151F4B86DB0001DBC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815F41171F4B86DB0001DBC9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		815F41181F4B86DB0001DBC9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		815F411B1F4B86DB0001DBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815F411D1F4B86DB0001DBC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815F41201F4B86DB0001DBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +69,12 @@
 		81977CE11F4D262200A12091 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = SOURCE_ROOT; };
 		81977CE51F4D423400A12091 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		81977CE71F4D423E00A12091 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		81B133DB1F4D6265005AB90B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
+		81B133DC1F4D6265005AB90B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		81B133DE1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = Extensions/KeyboardAvoidingScrollView/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = Extensions/KeyboardAvoidingScrollView/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		81B133E01F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "Extensions/KeyboardAvoidingScrollView/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "Extensions/KeyboardAvoidingScrollView/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-BlackItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
 		81FDECCE1F4D526E006CFFA5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -136,7 +142,10 @@
 				815F41151F4B86DB0001DBC9 /* AppDelegate.m */,
 				81FDECEA1F4D572A006CFFA5 /* Initial */,
 				81FDECEB1F4D5741006CFFA5 /* Login */,
+				81B133D91F4D61AF005AB90B /* Input */,
+				81B133DA1F4D6246005AB90B /* Playlist */,
 				815F41361F4B92F80001DBC9 /* Spotify */,
+				81B133C91F4D604E005AB90B /* Extensions */,
 				815F411A1F4B86DB0001DBC9 /* Main.storyboard */,
 				815F411D1F4B86DB0001DBC9 /* Assets.xcassets */,
 				815F411F1F4B86DB0001DBC9 /* LaunchScreen.storyboard */,
@@ -186,6 +195,39 @@
 			path = sayitwithsongs;
 			sourceTree = "<group>";
 		};
+		81B133C91F4D604E005AB90B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81B133CA1F4D605B005AB90B /* KeyboardAvoiding */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		81B133CA1F4D605B005AB90B /* KeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				81B133DE1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.h */,
+				81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */,
+				81B133E01F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = KeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		81B133D91F4D61AF005AB90B /* Input */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		81B133DA1F4D6246005AB90B /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Playlist;
+			sourceTree = "<group>";
+		};
 		81FDECCB1F4D5252006CFFA5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +260,8 @@
 		81FDECEB1F4D5741006CFFA5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				815F41171F4B86DB0001DBC9 /* LoginViewController.h */,
-				815F41181F4B86DB0001DBC9 /* LoginViewController.m */,
+				81B133DB1F4D6265005AB90B /* LoginViewController.h */,
+				81B133DC1F4D6265005AB90B /* LoginViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -343,8 +385,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				815F413E1F4B94260001DBC9 /* SpotifyManager.m in Sources */,
-				815F41191F4B86DB0001DBC9 /* LoginViewController.m in Sources */,
+				81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */,
+				81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */,
 				815F41131F4B86DB0001DBC9 /* main.m in Sources */,
 			);
