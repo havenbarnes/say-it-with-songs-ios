@@ -24,6 +24,8 @@
         } else {
             auth.session = session;
         }
+        
+        [self.window.rootViewController dismissViewControllerAnimated:true completion:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:@kSessionUpdatedKey object:self];
     };
     

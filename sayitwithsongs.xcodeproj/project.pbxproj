@@ -22,6 +22,8 @@
 		81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DC1F4D6265005AB90B /* LoginViewController.m */; };
 		81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */; };
 		81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		81B133EC1F4F6EF3005AB90B /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133EB1F4F6EF3005AB90B /* InitialViewController.m */; };
+		81CB664D1F521799009CF6B5 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB664C1F521799009CF6B5 /* InputViewController.m */; };
 		81FDECDB1F4D526E006CFFA5 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */; };
 		81FDECDC1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */; };
 		81FDECDD1F4D526E006CFFA5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCE1F4D526E006CFFA5 /* Montserrat-Bold.ttf */; };
@@ -75,6 +77,10 @@
 		81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = Extensions/KeyboardAvoidingScrollView/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		81B133E01F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "Extensions/KeyboardAvoidingScrollView/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "Extensions/KeyboardAvoidingScrollView/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		81B133EA1F4F6EF3005AB90B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = Initial/InitialViewController.h; sourceTree = "<group>"; };
+		81B133EB1F4F6EF3005AB90B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = Initial/InitialViewController.m; sourceTree = "<group>"; };
+		81CB664B1F521799009CF6B5 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputViewController.h; path = Input/InputViewController.h; sourceTree = "<group>"; };
+		81CB664C1F521799009CF6B5 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputViewController.m; path = Input/InputViewController.m; sourceTree = "<group>"; };
 		81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-BlackItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
 		81FDECCE1F4D526E006CFFA5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -217,6 +223,8 @@
 		81B133D91F4D61AF005AB90B /* Input */ = {
 			isa = PBXGroup;
 			children = (
+				81CB664B1F521799009CF6B5 /* InputViewController.h */,
+				81CB664C1F521799009CF6B5 /* InputViewController.m */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -253,6 +261,8 @@
 		81FDECEA1F4D572A006CFFA5 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
+				81B133EA1F4F6EF3005AB90B /* InitialViewController.h */,
+				81B133EB1F4F6EF3005AB90B /* InitialViewController.m */,
 			);
 			name = Initial;
 			sourceTree = "<group>";
@@ -390,7 +400,9 @@
 				81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */,
 				81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */,
+				81B133EC1F4F6EF3005AB90B /* InitialViewController.m in Sources */,
 				815F41131F4B86DB0001DBC9 /* main.m in Sources */,
+				81CB664D1F521799009CF6B5 /* InputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,15 @@
 #import <SafariServices/SafariServices.h>
 #import "Config.h"
 
+
+
 @protocol SpotifyManagerDelegate
+
 - (void)spotifyAuthenticated:(BOOL)loggedIn auth:(SPTAuth *)auth;
+
 @end
+
+
 
 @interface SpotifyManager : NSObject
 
@@ -26,5 +32,6 @@
 + (id)current;
 
 - (void)initialize;
+- (BOOL)isLoggedIn;
 
 @end

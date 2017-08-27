@@ -11,6 +11,11 @@
 
 @implementation SpotifyManager
 
+/// Checks for
+- (BOOL)isLoggedIn {
+    return [SPTAuth defaultInstance].clientID;
+}
+
 + (SpotifyManager *)current {
     static SpotifyManager *current = nil;
     static dispatch_once_t onceToken;

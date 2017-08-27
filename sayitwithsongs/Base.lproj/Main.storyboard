@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Glj-wI-Mti">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,11 +27,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="14p-TE-dVe" userLabel="Title">
-                                <rect key="frame" x="32" y="75" width="311" height="171"/>
+                                <rect key="frame" x="36" y="55" width="342" height="171"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Say It With 
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-L5-jJ1">
-                                <rect key="frame" x="58" y="305.5" width="259" height="56"/>
+                                <rect key="frame" x="62" y="340" width="290" height="56"/>
                                 <color key="backgroundColor" red="0.25518366689999999" green="0.72579854730000004" blue="0.33793830870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="MAh-ZP-M5h"/>
@@ -74,25 +74,28 @@
                                         <integer key="value" value="28"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8c-vg-md6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYr-14-ynq" userLabel="Subtitle">
-                                <rect key="frame" x="58" y="377.5" width="259" height="34.5"/>
+                                <rect key="frame" x="62" y="412" width="290" height="35"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <color key="textColor" red="0.50994521379470825" green="0.51362615823745728" blue="0.53459906578063965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.50980392156862742" green="0.51372549019607838" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.090544335544109344" green="0.094088979065418243" blue="0.098315708339214325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="14p-TE-dVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="3IN-z4-fwZ"/>
+                            <constraint firstItem="14p-TE-dVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="3IN-z4-fwZ"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="trailing" secondItem="NwN-L5-jJ1" secondAttribute="trailing" id="5RJ-JG-Hvg"/>
                             <constraint firstItem="NwN-L5-jJ1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9J9-Gj-SzH"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="leading" secondItem="NwN-L5-jJ1" secondAttribute="leading" id="Lgs-7H-yoH"/>
                             <constraint firstItem="NwN-L5-jJ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="P4k-Nn-uGw"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="top" secondItem="NwN-L5-jJ1" secondAttribute="bottom" constant="16" id="XAu-fc-zQx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NwN-L5-jJ1" secondAttribute="trailing" constant="42" id="jKy-N6-LtB"/>
-                            <constraint firstItem="14p-TE-dVe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="qAe-om-31J"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="14p-TE-dVe" secondAttribute="trailing" constant="16" id="qzB-jC-8A6"/>
+                            <constraint firstAttribute="trailing" secondItem="14p-TE-dVe" secondAttribute="trailing" constant="36" id="qzB-jC-8A6"/>
+                            <constraint firstItem="14p-TE-dVe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="55" id="wTu-Dz-5JL"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -109,11 +112,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mar-i3-8ud"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZT9-xE-gyP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-1P-VBG">
-                                <rect key="frame" x="32" y="75" width="311" height="171"/>
+                                <rect key="frame" x="36" y="55" width="342" height="171"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Say It With 
@@ -121,92 +124,14 @@
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Songs">
                                         <attributes>
                                             <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -217,7 +142,7 @@
                         <constraints>
                             <constraint firstItem="ZLD-1P-VBG" firstAttribute="leading" secondItem="ZT9-xE-gyP" secondAttribute="leadingMargin" constant="16" id="2X1-o6-DF5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZLD-1P-VBG" secondAttribute="trailing" constant="16" id="SdA-pb-1Mr"/>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="55" id="lT5-Bk-4BX"/>
+                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="35" id="lT5-Bk-4BX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -234,17 +159,71 @@
                         <viewControllerLayoutGuide type="bottom" id="FPp-xo-srR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qdn-WQ-3Rq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-Po-MUr" customClass="TPKeyboardAvoidingScrollView" customModule="sayitwithsongs" customModuleProvider="target">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-Po-MUr" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-LO-pY7">
-                                        <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="413" height="735"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xGB-TL-MiT" userLabel="Title">
-                                                <rect key="frame" x="24" y="75" width="327" height="171"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-1y-odp">
+                                                <rect key="frame" x="28" y="349" width="357" height="38"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.25518366694450378" green="0.72579854726791382" blue="0.33793830871582031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="yUs-nQ-zD6"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvv-gl-5Rz" userLabel="Underline">
+                                                <rect key="frame" x="28" y="389" width="357" height="2"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="Qkb-ja-Kin"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-RO-g5a" userLabel="Subtitle">
+                                                <rect key="frame" x="69" y="411" width="275" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="275" id="OCq-gg-Mue"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <color key="textColor" red="0.50994521380000002" green="0.51362615820000002" blue="0.53459906580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spR-TJ-VKT">
+                                                <rect key="frame" x="147" y="671" width="120" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="jC5-Lg-LHz"/>
+                                                    <constraint firstAttribute="width" constant="120" id="jmW-Gp-S52"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="LOG OUT">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Montserrat-Medium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logoutButtonPressed:" destination="uig-fb-8he" eventType="touchUpInside" id="ad3-H8-RmY"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-8B-dRV" userLabel="Title">
+                                                <rect key="frame" x="36" y="55" width="341" height="171"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Say It With 
@@ -252,158 +231,79 @@
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="Songs">
                                                         <attributes>
                                                             <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-1y-odp">
-                                                <rect key="frame" x="28" y="314.5" width="319" height="38"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="38" id="yUs-nQ-zD6"/>
-                                                </constraints>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvv-gl-5Rz">
-                                                <rect key="frame" x="28" y="354.5" width="319" height="2"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="Qkb-ja-Kin"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-RO-g5a" userLabel="Subtitle">
-                                                <rect key="frame" x="50" y="377" width="275" height="34.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <color key="textColor" red="0.50994521380000002" green="0.51362615820000002" blue="0.53459906580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="bTr-1y-odp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aAR-8B-dRV" secondAttribute="bottom" constant="40" id="0V4-5C-fVL"/>
+                                            <constraint firstItem="spR-TJ-VKT" firstAttribute="centerX" secondItem="wl5-LO-pY7" secondAttribute="centerX" id="35b-3g-MNs"/>
+                                            <constraint firstItem="aAR-8B-dRV" firstAttribute="top" secondItem="wl5-LO-pY7" secondAttribute="top" constant="55" id="7jO-JM-ZtA"/>
+                                            <constraint firstItem="aAR-8B-dRV" firstAttribute="leading" secondItem="wl5-LO-pY7" secondAttribute="leading" constant="36" id="Az4-gV-WUS"/>
                                             <constraint firstItem="Wvv-gl-5Rz" firstAttribute="leading" secondItem="bTr-1y-odp" secondAttribute="leading" id="FA4-qP-UPY"/>
+                                            <constraint firstAttribute="trailing" secondItem="aAR-8B-dRV" secondAttribute="trailing" constant="36" id="IhF-O8-qcC"/>
                                             <constraint firstAttribute="trailing" secondItem="bTr-1y-odp" secondAttribute="trailing" constant="28" id="K2G-zq-5Qy"/>
                                             <constraint firstItem="bTr-1y-odp" firstAttribute="leading" secondItem="wl5-LO-pY7" secondAttribute="leading" constant="28" id="Mo4-IN-kk9"/>
-                                            <constraint firstItem="xGB-TL-MiT" firstAttribute="top" secondItem="wl5-LO-pY7" secondAttribute="top" constant="75" id="TYn-iT-3W5"/>
                                             <constraint firstItem="Wvv-gl-5Rz" firstAttribute="bottom" secondItem="bTr-1y-odp" secondAttribute="bottom" constant="4" id="UCj-pm-PeV"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="xGB-TL-MiT" secondAttribute="trailing" constant="16" id="Uu5-G3-WPO"/>
                                             <constraint firstItem="Wvv-gl-5Rz" firstAttribute="trailing" secondItem="bTr-1y-odp" secondAttribute="trailing" id="VIV-e2-oae"/>
-                                            <constraint firstItem="xGB-TL-MiT" firstAttribute="leading" secondItem="wl5-LO-pY7" secondAttribute="leadingMargin" constant="16" id="pUP-EE-Eg4"/>
-                                            <constraint firstItem="bTr-1y-odp" firstAttribute="centerY" secondItem="wl5-LO-pY7" secondAttribute="centerY" id="zyw-xY-jLH"/>
+                                            <constraint firstItem="Bsi-RO-g5a" firstAttribute="top" secondItem="bTr-1y-odp" secondAttribute="bottom" constant="24.5" id="XSC-83-dRe"/>
+                                            <constraint firstItem="bTr-1y-odp" firstAttribute="centerY" secondItem="wl5-LO-pY7" secondAttribute="centerY" id="bnl-zL-iCV"/>
+                                            <constraint firstAttribute="bottom" secondItem="spR-TJ-VKT" secondAttribute="bottom" constant="24" id="hVD-bl-0fL"/>
+                                            <constraint firstItem="Bsi-RO-g5a" firstAttribute="centerX" secondItem="bTr-1y-odp" secondAttribute="centerX" id="hWb-lb-oOF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="top" constant="-0.5" id="3lZ-rs-lKZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="wl5-LO-pY7" secondAttribute="bottom" constant="0.5" id="6S8-R6-Qc7"/>
+                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="top" id="3lZ-rs-lKZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="wl5-LO-pY7" secondAttribute="bottom" id="6S8-R6-Qc7"/>
                                     <constraint firstItem="wl5-LO-pY7" firstAttribute="centerX" secondItem="xy0-Po-MUr" secondAttribute="centerX" id="Gum-rq-xt8"/>
                                     <constraint firstItem="wl5-LO-pY7" firstAttribute="centerY" secondItem="xy0-Po-MUr" secondAttribute="centerY" id="c3Q-rx-Kmw"/>
-                                    <constraint firstAttribute="trailing" secondItem="wl5-LO-pY7" secondAttribute="trailing" constant="0.5" id="lg1-Bd-2eK"/>
-                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="leading" secondItem="xy0-Po-MUr" secondAttribute="leading" constant="-0.5" id="urd-xt-J9b"/>
+                                    <constraint firstAttribute="trailing" secondItem="wl5-LO-pY7" secondAttribute="trailing" id="lg1-Bd-2eK"/>
+                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="leading" secondItem="xy0-Po-MUr" secondAttribute="leading" id="urd-xt-J9b"/>
                                 </constraints>
                             </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-Mg-8BV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d1G-iL-O7e">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2ee-hG-fHi"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xy0-Po-MUr" firstAttribute="width" secondItem="Qdn-WQ-3Rq" secondAttribute="width" id="3FR-i5-wbG"/>
-                            <constraint firstItem="xy0-Po-MUr" firstAttribute="centerY" secondItem="Qdn-WQ-3Rq" secondAttribute="centerY" id="7Ex-vH-g1X"/>
-                            <constraint firstItem="xy0-Po-MUr" firstAttribute="height" secondItem="Qdn-WQ-3Rq" secondAttribute="height" id="LoE-1M-gv4"/>
-                            <constraint firstItem="xy0-Po-MUr" firstAttribute="centerX" secondItem="Qdn-WQ-3Rq" secondAttribute="centerX" id="YA3-tU-96a"/>
+                            <constraint firstItem="FPp-xo-srR" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="bottom" id="Mqw-Ja-nbq"/>
+                            <constraint firstAttribute="trailing" secondItem="xy0-Po-MUr" secondAttribute="trailing" id="e0g-qm-mqL"/>
+                            <constraint firstItem="xy0-Po-MUr" firstAttribute="leading" secondItem="Qdn-WQ-3Rq" secondAttribute="leading" id="e9v-zg-Uun"/>
+                            <constraint firstItem="Dst-Mg-8BV" firstAttribute="top" secondItem="Qdn-WQ-3Rq" secondAttribute="topMargin" id="gjf-cA-DDM"/>
+                            <constraint firstItem="xy0-Po-MUr" firstAttribute="top" secondItem="Qdn-WQ-3Rq" secondAttribute="top" id="jrv-QS-2ds"/>
+                            <constraint firstItem="Dst-Mg-8BV" firstAttribute="leading" secondItem="Qdn-WQ-3Rq" secondAttribute="leading" id="pjz-jg-C7h"/>
+                            <constraint firstAttribute="trailing" secondItem="Dst-Mg-8BV" secondAttribute="trailing" id="yrB-2H-XzT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="bTr-1y-odp" id="NbS-m5-Xxa"/>
+                        <outlet property="textViewHeight" destination="yUs-nQ-zD6" id="ycR-Tm-Myc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgL-Oo-uy6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="198.35082458770617"/>
+            <point key="canvasLocation" x="852.17391304347836" y="198.09782608695653"/>
         </scene>
         <!--Playlist View Controller-->
         <scene sceneID="hZI-Ta-NJQ">
@@ -414,128 +314,88 @@
                         <viewControllerLayoutGuide type="bottom" id="Oaa-WO-Ja4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jxg-l3-vgK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CFg-KN-bD6" userLabel="Title">
-                                <rect key="frame" x="32" y="75" width="311" height="171"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Say It With 
-</string>
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Songs">
-                                        <attributes>
-                                            <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bei-Rf-lMo">
-                                <rect key="frame" x="0.0" y="284" width="375" height="313"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="646"/>
                                 <color key="backgroundColor" red="0.090544335544109344" green="0.094088979065418243" blue="0.098315708339214325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="f85-lK-cRC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="261"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-0x-Gas" userLabel="Title">
+                                            <rect key="frame" x="36" y="35" width="342" height="171"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Say It With 
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Songs">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXX-7S-5WU">
+                                            <rect key="frame" x="50" y="204" width="314" height="56"/>
+                                            <color key="backgroundColor" red="0.25518366689999999" green="0.72579854730000004" blue="0.33793830870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="56" id="Eaw-xz-oOX"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="P L A Y">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="20" name="Montserrat-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="28"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="4hx-0x-Gas" firstAttribute="leading" secondItem="f85-lK-cRC" secondAttribute="leading" constant="36" id="026-iH-zmx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aXX-7S-5WU" secondAttribute="trailing" constant="42" id="GXo-yz-BWy"/>
+                                        <constraint firstAttribute="trailing" secondItem="4hx-0x-Gas" secondAttribute="trailing" constant="36" id="UMB-O5-XHW"/>
+                                        <constraint firstItem="aXX-7S-5WU" firstAttribute="leading" secondItem="f85-lK-cRC" secondAttribute="leadingMargin" constant="42" id="pAh-Kz-k39"/>
+                                        <constraint firstItem="aXX-7S-5WU" firstAttribute="top" secondItem="4hx-0x-Gas" secondAttribute="bottom" constant="-2" id="pBD-Sn-nsq"/>
+                                        <constraint firstItem="4hx-0x-Gas" firstAttribute="top" secondItem="f85-lK-cRC" secondAttribute="top" constant="35" id="wRV-6F-3OM"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="GPV-zt-fZb">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="271" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GPV-zt-fZb" id="jXo-eH-wVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-A4-Lh7">
-                                                    <rect key="frame" x="24" y="14" width="301" height="21"/>
+                                                    <rect key="frame" x="24" y="14" width="340" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist • Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsC-fs-cJm">
-                                                    <rect key="frame" x="24" y="37.5" width="301" height="17.5"/>
+                                                    <rect key="frame" x="24" y="37" width="340" height="18"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                     <color key="textColor" red="0.6105794951229222" green="0.6141831193807793" blue="0.64205266497461921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -554,56 +414,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frK-MV-1vg">
-                                <rect key="frame" x="58" y="244" width="259" height="56"/>
-                                <color key="backgroundColor" red="0.25518366689999999" green="0.72579854730000004" blue="0.33793830870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="xeA-du-IVx"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="P L A Y">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="20" name="Montserrat-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-Ub-wcS" userLabel="Bottom Bar">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="666" width="414" height="70"/>
                                 <color key="backgroundColor" red="0.12367390841245651" green="0.14112278819084167" blue="0.14131346344947815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bei-Rf-lMo" firstAttribute="top" secondItem="frK-MV-1vg" secondAttribute="bottom" constant="-16" id="2hl-Qg-ad8"/>
                             <constraint firstAttribute="trailing" secondItem="bei-Rf-lMo" secondAttribute="trailing" id="3tF-Dv-3ye"/>
-                            <constraint firstItem="frK-MV-1vg" firstAttribute="top" secondItem="CFg-KN-bD6" secondAttribute="bottom" constant="-2" id="9EZ-dK-YMG"/>
                             <constraint firstItem="pJe-Ub-wcS" firstAttribute="leading" secondItem="jxg-l3-vgK" secondAttribute="leading" id="AA6-NG-JWz"/>
-                            <constraint firstItem="CFg-KN-bD6" firstAttribute="top" secondItem="jxg-l3-vgK" secondAttribute="topMargin" constant="75" id="CzC-ym-F0r"/>
-                            <constraint firstItem="Oaa-WO-Ja4" firstAttribute="top" secondItem="pJe-Ub-wcS" secondAttribute="bottom" id="Gq6-1Y-jRs"/>
-                            <constraint firstItem="frK-MV-1vg" firstAttribute="leading" secondItem="jxg-l3-vgK" secondAttribute="leadingMargin" constant="42" id="QBP-EM-mUB"/>
+                            <constraint firstItem="Oaa-WO-Ja4" firstAttribute="top" secondItem="bei-Rf-lMo" secondAttribute="bottom" constant="70" id="BfU-qi-5gv"/>
                             <constraint firstItem="pJe-Ub-wcS" firstAttribute="top" secondItem="bei-Rf-lMo" secondAttribute="bottom" id="Qef-hk-Uo1"/>
                             <constraint firstAttribute="trailing" secondItem="pJe-Ub-wcS" secondAttribute="trailing" id="Sjv-kA-8vJ"/>
-                            <constraint firstItem="Oaa-WO-Ja4" firstAttribute="top" secondItem="bei-Rf-lMo" secondAttribute="bottom" constant="70" id="c8w-Ez-Bsv"/>
-                            <constraint firstItem="CFg-KN-bD6" firstAttribute="leading" secondItem="jxg-l3-vgK" secondAttribute="leadingMargin" constant="16" id="izP-9S-uMh"/>
+                            <constraint firstItem="bei-Rf-lMo" firstAttribute="top" secondItem="JPs-OY-gD5" secondAttribute="bottom" id="chp-GC-UxP"/>
+                            <constraint firstItem="Oaa-WO-Ja4" firstAttribute="top" secondItem="pJe-Ub-wcS" secondAttribute="bottom" id="gK0-P9-UMq"/>
                             <constraint firstItem="bei-Rf-lMo" firstAttribute="leading" secondItem="jxg-l3-vgK" secondAttribute="leading" id="j1Y-En-cLS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CFg-KN-bD6" secondAttribute="trailing" constant="16" id="vAf-yC-HHT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="frK-MV-1vg" secondAttribute="trailing" constant="42" id="vTl-se-jTc"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3y0-Hu-JpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1565.5999999999999" y="191.1544227886057"/>
+            <point key="canvasLocation" x="1560.8695652173915" y="198.91304347826087"/>
         </scene>
     </scenes>
 </document>

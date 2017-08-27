@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SpotifyManager.h"
 
-@interface LoginViewController : UIViewController<SpotifyManagerDelegate>
+@interface LoginViewController : UIViewController
 
 @end
 

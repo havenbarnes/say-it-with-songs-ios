@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SpotifyManager.h"
 
 @interface LoginViewController ()
 
@@ -16,26 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
     
-    SpotifyManager *spotifyManager = [SpotifyManager current];
-    spotifyManager.delegate = self;
-    [spotifyManager initialize];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLogin:) name:@kSessionUpdatedKey object:nil];
+
 }
 
-- (void)spotifyAuthenticated:(BOOL)loggedIn auth:(SPTAuth *)auth {
-    if (loggedIn) {
-        // Contine Into App
-    } else {
-        // Authorize
-        NSURL *authURL = [auth spotifyWebAuthenticationURL];
-        // Present in a SafariViewController
-        SFSafariViewController *authViewController = [[SFSafariViewController alloc] initWithURL:authURL];
-        [self presentViewController:authViewController animated:YES completion:nil];
-    }
+- (IBAction)loginButtonPressed:(id)sender {
+    // Authorize.
+    SPTAuth *auth = [SPTAuth defaultInstance];
+    NSURL *authURL = [auth spotifyWebAuthenticationURL];
+    // Present in a SafariViewController
+    SFSafariViewController *authViewController = [[SFSafariViewController alloc] initWithURL:authURL];
+    [self presentViewController:authViewController animated:YES completion:nil];
+
+}
+
+- (void)handleLogin:(NSNotification *)note {
+    [self present:@"sbInputViewController"];
+}
+
+- (void)present:(NSString *)identifier {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:identifier];
+    [self presentViewController:vc animated:YES completion:NULL];
 }
 
 @end
