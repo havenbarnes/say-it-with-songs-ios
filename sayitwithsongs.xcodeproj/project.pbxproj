@@ -81,6 +81,7 @@
 		81B133EB1F4F6EF3005AB90B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = Initial/InitialViewController.m; sourceTree = "<group>"; };
 		81CB664B1F521799009CF6B5 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputViewController.h; path = Input/InputViewController.h; sourceTree = "<group>"; };
 		81CB664C1F521799009CF6B5 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputViewController.m; path = Input/InputViewController.m; sourceTree = "<group>"; };
+		81D4AF191F5378DC00E2E666 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Color.h; path = Extensions/Color.h; sourceTree = "<group>"; };
 		81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-BlackItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
 		81FDECCE1F4D526E006CFFA5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 		81B133C91F4D604E005AB90B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				81D4AF191F5378DC00E2E666 /* Color.h */,
 				81B133CA1F4D605B005AB90B /* KeyboardAvoiding */,
 			);
 			name = Extensions;

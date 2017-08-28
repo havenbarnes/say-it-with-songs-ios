@@ -17,19 +17,20 @@
 
 @protocol SpotifyManagerDelegate
 
+@optional
 - (void)spotifyAuthenticated:(BOOL)loggedIn auth:(SPTAuth *)auth;
 
 @end
 
-
-
-@interface SpotifyManager : NSObject
+@interface SpotifyManager : NSObject<SPTAudioStreamingDelegate>
 
 @property id<SpotifyManagerDelegate> delegate;
 @property SPTAuth *auth;
+@property SPTAudioStreamingController *player;
+
 @property (nonatomic, strong) UIViewController *authViewController;
 
-+ (id)current;
++ (id)sharedInstance;
 
 - (void)initialize;
 - (BOOL)isLoggedIn;

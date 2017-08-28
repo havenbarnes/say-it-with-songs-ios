@@ -17,12 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     SPTAuth *auth = [SPTAuth defaultInstance];
+    SPTAudioStreamingController *player = [SPTAudioStreamingController sharedInstance];
     
     SPTAuthCallback authCallback = ^(NSError *error, SPTSession *session) {
         if (error) {
             NSLog(@"Spotify Authentication Error: %@", error);
         } else {
             auth.session = session;
+            NSLog(@"Login complete, access token: %@", auth.session.accessToken);
+            [player loginWithAccessToken:auth.session.accessToken];
         }
         
         [self.window.rootViewController dismissViewControllerAnimated:true completion:nil];

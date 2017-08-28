@@ -13,7 +13,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    SpotifyManager *spotifyManager = [SpotifyManager current];
+    SpotifyManager *spotifyManager = [SpotifyManager sharedInstance];
     spotifyManager.delegate = self;
     [spotifyManager initialize];
     

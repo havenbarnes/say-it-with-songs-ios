@@ -18,8 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLogin:) name:@kSessionUpdatedKey object:nil];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleLogin:)
+                                                 name:@kSessionUpdatedKey object:nil];
 }
 
 - (IBAction)loginButtonPressed:(id)sender {

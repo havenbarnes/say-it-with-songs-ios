@@ -19,12 +19,56 @@
     self.textView.delegate = self;
 }
 
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    if (self.hasEdited) {
+        return;
+    }
+    // Animate prompt label and underline
+    [textView setTintColor:UIColor(0x41B956)];
+    [UIView animateWithDuration:0.3 delay:0.4 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [self animatePrompt];
+        [self animateBorder];
+    } completion:^(BOOL completed){
+        self.hasEdited = true;
+    }];
+}
+
+- (void)animatePrompt {
+    CGRect sourceRect = self.promptLabel.frame;
+    CGRect finalRect = sourceRect;
+    finalRect.size.width -= finalRect.size.width * 0.5;
+    finalRect.size.height -= finalRect.size.height * 0.5;
+    self.promptLabelY.constant -= 18;
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    transform = CGAffineTransformTranslate(transform,
+                                           -(CGRectGetMidX(sourceRect)-CGRectGetMidX(finalRect)),
+                                           -(CGRectGetMidY(sourceRect)-CGRectGetMidY(finalRect)));
+    transform = CGAffineTransformScale(transform,
+                                       finalRect.size.width/sourceRect.size.width,
+                                       finalRect.size.height/sourceRect.size.height);
+    self.promptLabel.transform = transform;
+    self.promptLabel.textColor = [UIColor whiteColor];
+    [self.view layoutIfNeeded];
+}
+
+- (void)animateBorder {
+    UIView *greenView = [[UIView alloc] init];
+    greenView.backgroundColor = UIColor(0x41B956);
+    greenView.frame = CGRectZero;
+    [self.textViewBorder addSubview: greenView];
+    greenView.center = self.textViewBorder.center;
+    greenView.frame = self.textViewBorder.bounds;
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
     
     CGSize fitSize = CGSizeMake(textView.frame.size.width, MAXFLOAT);
     CGSize textSize = [textView sizeThatFits: fitSize];
     
-    self.textViewHeight.constant = textSize.height;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.textViewHeight.constant = textSize.height;
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
@@ -34,10 +78,11 @@
         return NO;
     }
     
-    return textView.text.length + (text.length - range.length) <= 140;
+    return textView.text.length + (text.length - range.length) <= 80;
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
+    [[SpotifyManager sharedInstance] logout];
     [self present:@"sbLoginViewController"];
 }
 

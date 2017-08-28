@@ -13,10 +13,10 @@
 
 /// Checks for
 - (BOOL)isLoggedIn {
-    return [SPTAuth defaultInstance].clientID;
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@kSessionUserDefaultsKey];
 }
 
-+ (SpotifyManager *)current {
++ (id)sharedInstance {
     static SpotifyManager *current = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -32,8 +32,17 @@
     self.auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
     self.auth.sessionUserDefaultsKey = @kSessionUserDefaultsKey;
     
+    self.player = [SPTAudioStreamingController sharedInstance];
+    self.player.delegate = self;
+    NSError *audioStreamingError;
+    [self.player startWithClientId:self.auth.clientID error:&audioStreamingError];
+    
     [self.delegate spotifyAuthenticated:[self.auth.session isValid]
                                    auth:self.auth];
+}
+
+- (void)logout {
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@kSessionUserDefaultsKey];
 }
 
 @end
