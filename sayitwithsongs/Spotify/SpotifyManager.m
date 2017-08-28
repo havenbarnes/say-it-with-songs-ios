@@ -41,7 +41,20 @@
                                    auth:self.auth];
 }
 
+- (void)search:(NSString *)query {
+    [SPTSearch performSearchWithQuery:query
+                            queryType:SPTQueryTypeTrack
+                          accessToken:self.auth.session.accessToken callback:^(NSError *error, id object) {
+                              if (error) {
+                                  NSLog(@"Search Error: %@", error);
+                              }
+                              NSLog(@"Search Results:\n%@", object);
+                              
+                          }];
+}
+
 - (void)logout {
+    [self.player logout];
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@kSessionUserDefaultsKey];
 }
 

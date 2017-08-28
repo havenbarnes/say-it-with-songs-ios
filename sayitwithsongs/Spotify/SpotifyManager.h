@@ -33,6 +33,7 @@
 + (id)sharedInstance;
 
 - (void)initialize;
+- (void)search:(NSString *)query;
 - (BOOL)isLoggedIn;
 
 @end

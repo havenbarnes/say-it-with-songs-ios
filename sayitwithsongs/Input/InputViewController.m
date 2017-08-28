@@ -75,6 +75,9 @@
     
     if([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
+        
+        [[SpotifyManager sharedInstance] search:textView.text];
+        
         return NO;
     }
     

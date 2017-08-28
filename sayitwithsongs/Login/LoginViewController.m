@@ -24,10 +24,8 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-    // Authorize.
     SPTAuth *auth = [SPTAuth defaultInstance];
     NSURL *authURL = [auth spotifyWebAuthenticationURL];
-    // Present in a SafariViewController
     SFSafariViewController *authViewController = [[SFSafariViewController alloc] initWithURL:authURL];
     [self presentViewController:authViewController animated:YES completion:nil];
 
