@@ -31,7 +31,9 @@
 + (id)sharedInstance;
 
 - (void)initialize;
-- (void)search:(NSString *)query completion:(void(^)(SPTPartialTrack *))callback;
+- (void)search:(NSString *)query offset:(int)offset completion:(void(^)(SPTPartialTrack *))callback;
+- (void)loadPlaylist:(NSURL *)uri completion:(void(^)(SPTPlaylistSnapshot *))callback;
+- (NSString *)urlFromPlaylist:(SPTPlaylistSnapshot *)playlist;
 - (BOOL)isLoggedIn;
 
 @end

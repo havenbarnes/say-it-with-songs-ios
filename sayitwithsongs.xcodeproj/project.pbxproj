@@ -25,6 +25,7 @@
 		81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */; };
 		81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		81B133EC1F4F6EF3005AB90B /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133EB1F4F6EF3005AB90B /* InitialViewController.m */; };
+		81BB981F1F5511460046899B /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BB981E1F5511460046899B /* TrackCell.m */; };
 		81CB664D1F521799009CF6B5 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB664C1F521799009CF6B5 /* InputViewController.m */; };
 		81FDECDB1F4D526E006CFFA5 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCC1F4D526E006CFFA5 /* Montserrat-Black.ttf */; };
 		81FDECDC1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECCD1F4D526E006CFFA5 /* Montserrat-BlackItalic.ttf */; };
@@ -41,8 +42,8 @@
 		81FDECE71F4D526E006CFFA5 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECD81F4D526E006CFFA5 /* Montserrat-SemiBoldItalic.ttf */; };
 		81FDECE81F4D526E006CFFA5 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECD91F4D526E006CFFA5 /* Montserrat-Thin.ttf */; };
 		81FDECE91F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECDA1F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf */; };
-		C7F493832F95299A57618A17 /* libPods-sayitwithsongs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */; };
-		E70AAB529A6630E408467982 /* libPods-sayitwithsongsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */; };
+		C1A4D4BFBEF037E1225FC7BC /* libPods-sayitwithsongs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BA48F5AA9B33B30C6D1A28 /* libPods-sayitwithsongs.a */; };
+		D678CFD4CBA7FA40EAEC006D /* libPods-sayitwithsongsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6970F65BA4AD7BBC25C66045 /* libPods-sayitwithsongsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +58,12 @@
 
 /* Begin PBXFileReference section */
 		1FFCD4AA519C4B6DC2BC671A /* Pods-sayitwithsongsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA6AACA04A327EECD0BA21A /* Pods-sayitwithsongsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6970F65BA4AD7BBC25C66045 /* libPods-sayitwithsongsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BA48F5AA9B33B30C6D1A28 /* libPods-sayitwithsongs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		812BBF5B1F54CF1B00C7E1CE /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistViewController.h; path = Playlist/PlaylistViewController.h; sourceTree = "<group>"; };
 		812BBF5C1F54CF1B00C7E1CE /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistViewController.m; path = Playlist/PlaylistViewController.m; sourceTree = "<group>"; };
+		8152CF121F55457900DD7971 /* HBStatusBarNotification.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HBStatusBarNotification.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/sayitwithsongs-ftjotpiikqbvobepgocfmtijbglx/Build/Products/Debug-iphoneos/HBStatusBarNotification/HBStatusBarNotification.framework"; sourceTree = "<group>"; };
 		815F410E1F4B86DB0001DBC9 /* sayitwithsongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sayitwithsongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815F41121F4B86DB0001DBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815F41141F4B86DB0001DBC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 		81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "Extensions/KeyboardAvoidingScrollView/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		81B133EA1F4F6EF3005AB90B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = Initial/InitialViewController.h; sourceTree = "<group>"; };
 		81B133EB1F4F6EF3005AB90B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = Initial/InitialViewController.m; sourceTree = "<group>"; };
+		81BB981D1F5511460046899B /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackCell.h; path = Playlist/TrackCell.h; sourceTree = "<group>"; };
+		81BB981E1F5511460046899B /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackCell.m; path = Playlist/TrackCell.m; sourceTree = "<group>"; };
 		81CB664B1F521799009CF6B5 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputViewController.h; path = Input/InputViewController.h; sourceTree = "<group>"; };
 		81CB664C1F521799009CF6B5 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputViewController.m; path = Input/InputViewController.m; sourceTree = "<group>"; };
 		81D4AF191F5378DC00E2E666 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Color.h; path = Extensions/Color.h; sourceTree = "<group>"; };
@@ -110,7 +115,6 @@
 		81FDECDA1F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ThinItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		8632E4FDD44D907FA5B0D195 /* Pods-sayitwithsongs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs.debug.xcconfig"; sourceTree = "<group>"; };
 		9AEBF09DC8A20D97985A47C3 /* Pods-sayitwithsongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs.release.xcconfig"; sourceTree = "<group>"; };
-		DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,7 @@
 				81977CE21F4D262200A12091 /* SpotifyAudioPlayback.framework in Frameworks */,
 				81977CE41F4D262300A12091 /* SpotifyMetadata.framework in Frameworks */,
 				81977CE31F4D262300A12091 /* SpotifyAuthentication.framework in Frameworks */,
-				C7F493832F95299A57618A17 /* libPods-sayitwithsongs.a in Frameworks */,
+				C1A4D4BFBEF037E1225FC7BC /* libPods-sayitwithsongs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70AAB529A6630E408467982 /* libPods-sayitwithsongsTests.a in Frameworks */,
+				D678CFD4CBA7FA40EAEC006D /* libPods-sayitwithsongsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,13 +215,14 @@
 		81977CDE1F4D229900A12091 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8152CF121F55457900DD7971 /* HBStatusBarNotification.framework */,
 				81977CE71F4D423E00A12091 /* SystemConfiguration.framework */,
 				81977CE51F4D423400A12091 /* AVFoundation.framework */,
 				81977CDF1F4D262200A12091 /* SpotifyAudioPlayback.framework */,
 				81977CE01F4D262200A12091 /* SpotifyAuthentication.framework */,
 				81977CE11F4D262200A12091 /* SpotifyMetadata.framework */,
-				29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */,
-				DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */,
+				78BA48F5AA9B33B30C6D1A28 /* libPods-sayitwithsongs.a */,
+				6970F65BA4AD7BBC25C66045 /* libPods-sayitwithsongsTests.a */,
 			);
 			name = Frameworks;
 			path = sayitwithsongs;
@@ -257,6 +262,8 @@
 			children = (
 				812BBF5B1F54CF1B00C7E1CE /* PlaylistViewController.h */,
 				812BBF5C1F54CF1B00C7E1CE /* PlaylistViewController.m */,
+				81BB981D1F5511460046899B /* TrackCell.h */,
+				81BB981E1F5511460046899B /* TrackCell.m */,
 			);
 			name = Playlist;
 			sourceTree = "<group>";
@@ -535,6 +542,7 @@
 				81A2343E1F54C69900E08915 /* PlaylistFactory.m in Sources */,
 				81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */,
 				81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				81BB981F1F5511460046899B /* TrackCell.m in Sources */,
 				815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */,
 				81B133EC1F4F6EF3005AB90B /* InitialViewController.m in Sources */,
 				815F41131F4B86DB0001DBC9 /* main.m in Sources */,
@@ -677,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8632E4FDD44D907FA5B0D195 /* Pods-sayitwithsongs.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -687,6 +696,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.azing.sayitwithsongs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -694,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AEBF09DC8A20D97985A47C3 /* Pods-sayitwithsongs.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -704,6 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.azing.sayitwithsongs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

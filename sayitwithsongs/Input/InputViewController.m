@@ -99,7 +99,7 @@
 - (void)presentNewPlaylist:(SPTPlaylistSnapshot *)playlist {
     if (playlist) {
         PlaylistViewController *vc = (PlaylistViewController *) [self instantiate:@"sbPlaylistViewController"];
-        vc.playlist = playlist;
+        vc.playlistUri = playlist.uri;
         [self presentViewController:vc animated:YES completion:NULL];
     } else {
         UIAlertController* alert = [UIAlertController

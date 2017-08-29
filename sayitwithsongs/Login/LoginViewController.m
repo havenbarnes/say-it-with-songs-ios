@@ -28,7 +28,6 @@
     NSURL *authURL = [auth spotifyWebAuthenticationURL];
     SFSafariViewController *authViewController = [[SFSafariViewController alloc] initWithURL:authURL];
     [self presentViewController:authViewController animated:YES completion:nil];
-
 }
 
 - (void)handleLogin:(NSNotification *)note {

@@ -31,13 +31,18 @@
     
     for (int i = 0; i < allWords.count; i++) {
         NSString *word = allWords[i];
-        [manager search:word completion:^(SPTPartialTrack *track) {
+        [manager search:word offset:0 completion:^(SPTPartialTrack *track) {
             
             queriesCompleted++;
             
             if (track) {
                 // Keep the tracks in proper order
-                [tracks insertObject:track atIndex: tracks.count == 0 ? 0 : i];
+                if (i > tracks.count) {
+                    [tracks addObject:track];
+                } else {
+                    [tracks insertObject:track atIndex: i];
+                }
+                
             } else {
                 callback(nil);
                 return;
@@ -77,12 +82,11 @@
 
 #pragma mark - Spotify Playlist Helpers
 
-
 /// Creates Spotify Playlist and adds predetermined tracks to it. Returns created playlist
 - (void)createSPTPlayList:(NSArray *)tracks completion:(void(^)(SPTPlaylistSnapshot *))callback {
     NSString* username = [SPTAuth defaultInstance].session.canonicalUsername;
     NSString* accessToken = [SPTAuth defaultInstance].session.accessToken;
-    [SPTPlaylistList createPlaylistWithName:@"Say It With Songs" forUser:username publicFlag:YES accessToken:accessToken callback:^(NSError *error, SPTPlaylistSnapshot *playlist) {
+    [SPTPlaylistList createPlaylistWithName:@"My Message In Songs" forUser:username publicFlag:YES accessToken:accessToken callback:^(NSError *error, SPTPlaylistSnapshot *playlist) {
         
         [self addTracksToPlaylist:tracks playlist:playlist completion:^{
             callback(playlist);

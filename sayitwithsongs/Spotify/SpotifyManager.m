@@ -41,24 +41,47 @@
                                    auth:self.auth];
 }
 
-- (void)search:(NSString *)query completion:(void(^)(SPTPartialTrack *))callback {
+- (void)search:(NSString *)query offset:(int)offset completion:(void(^)(SPTPartialTrack *))callback {
     NSString *accessToken = [SPTAuth defaultInstance].session.accessToken;
     
-    [SPTSearch performSearchWithQuery:query
-                            queryType:SPTQueryTypeTrack
-                          accessToken:accessToken
-                             callback:^(NSError *error, id object) {
-                                 
-                                 if (error) {
-                                     NSLog(@"Search Error: %@", error);
-                                 }
-                                 
-                                 NSArray *results = [(SPTListPage *) object items];
-                                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name =[c] %@", query];
-                                 NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
-                                 
-                                 callback(exactResults.firstObject);
-                             }];
+    [SPTSearch performSearchWithQuery:query queryType:SPTQueryTypeTrack offset:offset accessToken:accessToken callback:^(NSError *error, id object) {
+        
+        if (error) {
+            NSLog(@"Search Error: %@", error);
+        }
+        
+        NSArray *results = [(SPTListPage *) object items];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name =[c] %@", query];
+        NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
+        
+        if (exactResults.count == 0 && offset < 5) {
+            int newOffset = offset + 1;
+            [self search:query offset:newOffset completion:callback];
+        } else {
+            callback(exactResults.firstObject);
+        }
+    }];
+}
+
+- (void)loadPlaylist:(NSURL *)uri completion:(void(^)(SPTPlaylistSnapshot *))callback {
+    NSString *accessToken = [SPTAuth defaultInstance].session.accessToken;
+    [SPTPlaylistSnapshot playlistWithURI:uri accessToken:accessToken callback:^(NSError *error, id object) {
+        NSLog(@"Load Playlist Results: %@", object);
+        if(error) {
+            NSLog(@"Load Playlist Error: %@", error);
+        }
+        SPTPlaylistSnapshot *playlist = (SPTPlaylistSnapshot *) object;
+        callback(playlist);
+    }];
+}
+
+- (NSString *)urlFromPlaylist:(SPTPartialPlaylist *)playlist {
+    NSString *uri = playlist.uri.absoluteString;
+    NSString *username = [SPTAuth defaultInstance].session.canonicalUsername;
+    NSString *removeable = [NSString stringWithFormat:@"spotify:user:%@:playlist:", username];
+    NSString *spotifyId = [uri stringByReplacingOccurrencesOfString:removeable withString:@""];
+    NSString *url = [NSString stringWithFormat:@"https://open.spotify.com/user/%@/playlist/%@", username, spotifyId];
+    return url;
 }
 
 - (void)logout {

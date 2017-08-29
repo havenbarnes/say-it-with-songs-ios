@@ -16,12 +16,83 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", self.playlist.tracksForPlayback);
+    
+    self.linkButton.enabled = false;
+    self.messageButton.enabled = false;
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 60, 0)];
+    
+    SpotifyManager *manager = [SpotifyManager sharedInstance];
+    [manager loadPlaylist:self.playlistUri completion:^(SPTPlaylistSnapshot *playlist) {
+        self.playlist = playlist;
+        NSLog(@"%@", self.playlist.tracksForPlayback);
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        
+        self.linkButton.enabled = true;
+        self.messageButton.enabled = true;
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableView Delegate Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.playlist.trackCount;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sbTrackCell" forIndexPath:indexPath];
+    SPTPartialTrack *track = self.playlist.tracksForPlayback[indexPath.row];
+    cell.track = track;
+    [cell initialize];
+    
+    if (cell.track == self.nowPlaying) {
+        [cell setNowPlaying];
+    } else {
+        [cell hideNowPlaying];
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TrackCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (self.nowPlaying != cell.track) {
+        self.nowPlaying = cell.track;
+        [tableView reloadData];
+        
+        // Start playing track
+    }
+}
+
+#pragma mark - Sharing / Dismissal
+
+- (IBAction)linkButtonPressed:(id)sender {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    SpotifyManager *manager = [SpotifyManager sharedInstance];
+    NSString *link = [manager urlFromPlaylist:self.playlist];
+    pasteboard.string = link;
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = @"Link Copied!";
+    [hud hideAnimated:YES afterDelay:1.0];
+    
+
+}
+
+- (IBAction)messageButtonPressed:(id)sender {
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+    if([MFMessageComposeViewController canSendText]) {
+        SpotifyManager *manager = [SpotifyManager sharedInstance];
+        NSString *link = [manager urlFromPlaylist:self.playlist];
+        controller.body = [NSString stringWithFormat:@"I couldn't think of a better way to say this:\n%@", link];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
 }
 
 - (IBAction)dismissButtonPressed:(id)sender {
