@@ -28,7 +28,7 @@
 - (void)initialize {
     self.auth = [SPTAuth defaultInstance];
     self.auth.clientID = @kClientId;
-    self.auth.requestedScopes = @[SPTAuthStreamingScope];
+    self.auth.requestedScopes = @[SPTAuthStreamingScope, SPTAuthPlaylistModifyPublicScope];
     self.auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
     self.auth.sessionUserDefaultsKey = @kSessionUserDefaultsKey;
     
@@ -41,16 +41,24 @@
                                    auth:self.auth];
 }
 
-- (void)search:(NSString *)query {
+- (void)search:(NSString *)query completion:(void(^)(SPTPartialTrack *))callback {
+    NSString *accessToken = [SPTAuth defaultInstance].session.accessToken;
+    
     [SPTSearch performSearchWithQuery:query
                             queryType:SPTQueryTypeTrack
-                          accessToken:self.auth.session.accessToken callback:^(NSError *error, id object) {
-                              if (error) {
-                                  NSLog(@"Search Error: %@", error);
-                              }
-                              NSLog(@"Search Results:\n%@", object);
-                              
-                          }];
+                          accessToken:accessToken
+                             callback:^(NSError *error, id object) {
+                                 
+                                 if (error) {
+                                     NSLog(@"Search Error: %@", error);
+                                 }
+                                 
+                                 NSArray *results = [(SPTListPage *) object items];
+                                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name =[c] %@", query];
+                                 NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
+                                 
+                                 callback(exactResults.firstObject);
+                             }];
 }
 
 - (void)logout {

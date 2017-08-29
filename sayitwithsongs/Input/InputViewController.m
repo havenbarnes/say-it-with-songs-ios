@@ -76,12 +76,44 @@
     if([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         
-        [[SpotifyManager sharedInstance] search:textView.text];
-        
+        [self buildPlaylist:textView.text];
         return NO;
     }
     
     return textView.text.length + (text.length - range.length) <= 80;
+}
+
+- (void)buildPlaylist:(NSString *)message {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"Building Playist";
+    
+    PlaylistFactory *factory = [[PlaylistFactory alloc] init];
+    [factory generatePlaylist:message completion:^(SPTPlaylistSnapshot *playlist) {
+        [hud hideAnimated:YES];
+        [self presentNewPlaylist:playlist];
+    }];
+}
+
+/// Presents new playlist view or displays message if playlist could not be made
+- (void)presentNewPlaylist:(SPTPlaylistSnapshot *)playlist {
+    if (playlist) {
+        PlaylistViewController *vc = (PlaylistViewController *) [self instantiate:@"sbPlaylistViewController"];
+        vc.playlist = playlist;
+        [self presentViewController:vc animated:YES completion:NULL];
+    } else {
+        UIAlertController* alert = [UIAlertController
+                                    alertControllerWithTitle:@"Playlist Creation Failed"
+                                    message:@"Sorry, a playlist with this message could not be made."
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction
+                                        actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
@@ -89,9 +121,13 @@
     [self present:@"sbLoginViewController"];
 }
 
-- (void)present:(NSString *)identifier {
+- (UIViewController *)instantiate:(NSString *)identifier {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:identifier];
+    return [sb instantiateViewControllerWithIdentifier:identifier];
+}
+
+- (void)present:(NSString *)identifier {
+    UIViewController *vc = [self instantiate:identifier];
     [self presentViewController:vc animated:YES completion:NULL];
 }
 

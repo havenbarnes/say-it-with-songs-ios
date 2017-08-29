@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "SpotifyManager.h"
+#import "PlaylistFactory.h"
+#import "PlaylistViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "Color.h"
+
 @interface InputViewController : UIViewController<UITextViewDelegate>
 
 @property BOOL hasEdited;

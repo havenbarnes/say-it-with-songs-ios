@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812BBF5D1F54CF1B00C7E1CE /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812BBF5C1F54CF1B00C7E1CE /* PlaylistViewController.m */; };
 		815F41131F4B86DB0001DBC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815F41121F4B86DB0001DBC9 /* main.m */; };
 		815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815F41151F4B86DB0001DBC9 /* AppDelegate.m */; };
 		815F411C1F4B86DB0001DBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815F411A1F4B86DB0001DBC9 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		81977CE41F4D262300A12091 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE11F4D262200A12091 /* SpotifyMetadata.framework */; };
 		81977CE61F4D423400A12091 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE51F4D423400A12091 /* AVFoundation.framework */; };
 		81977CE81F4D423E00A12091 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81977CE71F4D423E00A12091 /* SystemConfiguration.framework */; };
+		81A2343E1F54C69900E08915 /* PlaylistFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2343D1F54C69900E08915 /* PlaylistFactory.m */; };
 		81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DC1F4D6265005AB90B /* LoginViewController.m */; };
 		81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133DF1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m */; };
 		81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B133E11F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
@@ -39,6 +41,8 @@
 		81FDECE71F4D526E006CFFA5 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECD81F4D526E006CFFA5 /* Montserrat-SemiBoldItalic.ttf */; };
 		81FDECE81F4D526E006CFFA5 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECD91F4D526E006CFFA5 /* Montserrat-Thin.ttf */; };
 		81FDECE91F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81FDECDA1F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf */; };
+		C7F493832F95299A57618A17 /* libPods-sayitwithsongs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */; };
+		E70AAB529A6630E408467982 /* libPods-sayitwithsongsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FFCD4AA519C4B6DC2BC671A /* Pods-sayitwithsongsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA6AACA04A327EECD0BA21A /* Pods-sayitwithsongsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests.release.xcconfig"; sourceTree = "<group>"; };
+		812BBF5B1F54CF1B00C7E1CE /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistViewController.h; path = Playlist/PlaylistViewController.h; sourceTree = "<group>"; };
+		812BBF5C1F54CF1B00C7E1CE /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistViewController.m; path = Playlist/PlaylistViewController.m; sourceTree = "<group>"; };
 		815F410E1F4B86DB0001DBC9 /* sayitwithsongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sayitwithsongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815F41121F4B86DB0001DBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815F41141F4B86DB0001DBC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +80,8 @@
 		81977CE11F4D262200A12091 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = SOURCE_ROOT; };
 		81977CE51F4D423400A12091 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		81977CE71F4D423E00A12091 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		81A2343C1F54C69900E08915 /* PlaylistFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlaylistFactory.h; path = Spotify/PlaylistFactory.h; sourceTree = "<group>"; };
+		81A2343D1F54C69900E08915 /* PlaylistFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PlaylistFactory.m; path = Spotify/PlaylistFactory.m; sourceTree = "<group>"; };
 		81B133DB1F4D6265005AB90B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		81B133DC1F4D6265005AB90B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		81B133DE1F4D6298005AB90B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = Extensions/KeyboardAvoidingScrollView/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -97,6 +108,9 @@
 		81FDECD81F4D526E006CFFA5 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBoldItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		81FDECD91F4D526E006CFFA5 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		81FDECDA1F4D526E006CFFA5 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ThinItalic.ttf"; path = "sayitwithsongs/Fonts/Montserrat/Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8632E4FDD44D907FA5B0D195 /* Pods-sayitwithsongs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs.debug.xcconfig"; sourceTree = "<group>"; };
+		9AEBF09DC8A20D97985A47C3 /* Pods-sayitwithsongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sayitwithsongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs.release.xcconfig"; sourceTree = "<group>"; };
+		DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sayitwithsongsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,7 @@
 				81977CE21F4D262200A12091 /* SpotifyAudioPlayback.framework in Frameworks */,
 				81977CE41F4D262300A12091 /* SpotifyMetadata.framework in Frameworks */,
 				81977CE31F4D262300A12091 /* SpotifyAuthentication.framework in Frameworks */,
+				C7F493832F95299A57618A17 /* libPods-sayitwithsongs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70AAB529A6630E408467982 /* libPods-sayitwithsongsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +146,7 @@
 				815F412A1F4B86DB0001DBC9 /* sayitwithsongsTests */,
 				815F410F1F4B86DB0001DBC9 /* Products */,
 				81977CDE1F4D229900A12091 /* Frameworks */,
+				B58B6D6A37B390E6492AFD9F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +202,8 @@
 				815F413B1F4B940E0001DBC9 /* Config.h */,
 				815F413C1F4B94260001DBC9 /* SpotifyManager.h */,
 				815F413D1F4B94260001DBC9 /* SpotifyManager.m */,
+				81A2343C1F54C69900E08915 /* PlaylistFactory.h */,
+				81A2343D1F54C69900E08915 /* PlaylistFactory.m */,
 			);
 			name = Spotify;
 			sourceTree = "<group>";
@@ -197,6 +216,8 @@
 				81977CDF1F4D262200A12091 /* SpotifyAudioPlayback.framework */,
 				81977CE01F4D262200A12091 /* SpotifyAuthentication.framework */,
 				81977CE11F4D262200A12091 /* SpotifyMetadata.framework */,
+				29C315EA10FA59FC0224BFCD /* libPods-sayitwithsongs.a */,
+				DE9545A6312F92D08D1C4156 /* libPods-sayitwithsongsTests.a */,
 			);
 			name = Frameworks;
 			path = sayitwithsongs;
@@ -234,6 +255,8 @@
 		81B133DA1F4D6246005AB90B /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
+				812BBF5B1F54CF1B00C7E1CE /* PlaylistViewController.h */,
+				812BBF5C1F54CF1B00C7E1CE /* PlaylistViewController.m */,
 			);
 			name = Playlist;
 			sourceTree = "<group>";
@@ -278,6 +301,17 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		B58B6D6A37B390E6492AFD9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8632E4FDD44D907FA5B0D195 /* Pods-sayitwithsongs.debug.xcconfig */,
+				9AEBF09DC8A20D97985A47C3 /* Pods-sayitwithsongs.release.xcconfig */,
+				1FFCD4AA519C4B6DC2BC671A /* Pods-sayitwithsongsTests.debug.xcconfig */,
+				5FA6AACA04A327EECD0BA21A /* Pods-sayitwithsongsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,9 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815F41301F4B86DB0001DBC9 /* Build configuration list for PBXNativeTarget "sayitwithsongs" */;
 			buildPhases = (
+				81ACC0FB56AE40141CDC5187 /* [CP] Check Pods Manifest.lock */,
 				815F410A1F4B86DB0001DBC9 /* Sources */,
 				815F410B1F4B86DB0001DBC9 /* Frameworks */,
 				815F410C1F4B86DB0001DBC9 /* Resources */,
+				DB5CCBC4233C16DA51820B3D /* [CP] Embed Pods Frameworks */,
+				7823B51117D8C4867864430E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,9 +339,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815F41331F4B86DB0001DBC9 /* Build configuration list for PBXNativeTarget "sayitwithsongsTests" */;
 			buildPhases = (
+				CEFE39F95392DAEBB4DD2FE6 /* [CP] Check Pods Manifest.lock */,
 				815F41231F4B86DB0001DBC9 /* Sources */,
 				815F41241F4B86DB0001DBC9 /* Frameworks */,
 				815F41251F4B86DB0001DBC9 /* Resources */,
+				9552386DB65917D7710C6C91 /* [CP] Embed Pods Frameworks */,
+				D4AEA85B9C26E4B2899DB801 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,6 +432,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7823B51117D8C4867864430E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81ACC0FB56AE40141CDC5187 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9552386DB65917D7710C6C91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEFE39F95392DAEBB4DD2FE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4AEA85B9C26E4B2899DB801 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sayitwithsongsTests/Pods-sayitwithsongsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5CCBC4233C16DA51820B3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sayitwithsongs/Pods-sayitwithsongs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		815F410A1F4B86DB0001DBC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -399,11 +532,13 @@
 			files = (
 				81B133E21F4D6298005AB90B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				815F413E1F4B94260001DBC9 /* SpotifyManager.m in Sources */,
+				81A2343E1F54C69900E08915 /* PlaylistFactory.m in Sources */,
 				81B133DD1F4D6265005AB90B /* LoginViewController.m in Sources */,
 				81B133E31F4D6298005AB90B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				815F41161F4B86DB0001DBC9 /* AppDelegate.m in Sources */,
 				81B133EC1F4F6EF3005AB90B /* InitialViewController.m in Sources */,
 				815F41131F4B86DB0001DBC9 /* main.m in Sources */,
+				812BBF5D1F54CF1B00C7E1CE /* PlaylistViewController.m in Sources */,
 				81CB664D1F521799009CF6B5 /* InputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +675,7 @@
 		};
 		815F41311F4B86DB0001DBC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8632E4FDD44D907FA5B0D195 /* Pods-sayitwithsongs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
@@ -556,6 +692,7 @@
 		};
 		815F41321F4B86DB0001DBC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEBF09DC8A20D97985A47C3 /* Pods-sayitwithsongs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
@@ -572,6 +709,7 @@
 		};
 		815F41341F4B86DB0001DBC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FFCD4AA519C4B6DC2BC671A /* Pods-sayitwithsongsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
@@ -585,6 +723,7 @@
 		};
 		815F41351F4B86DB0001DBC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6AACA04A327EECD0BA21A /* Pods-sayitwithsongsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = P6WDVDEGP6;

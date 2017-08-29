@@ -13,8 +13,6 @@
 #import <SafariServices/SafariServices.h>
 #import "Config.h"
 
-
-
 @protocol SpotifyManagerDelegate
 
 @optional
@@ -33,7 +31,7 @@
 + (id)sharedInstance;
 
 - (void)initialize;
-- (void)search:(NSString *)query;
+- (void)search:(NSString *)query completion:(void(^)(SPTPartialTrack *))callback;
 - (BOOL)isLoggedIn;
 
 @end
