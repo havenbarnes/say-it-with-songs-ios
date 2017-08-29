@@ -10,6 +10,7 @@
 #import "Color.h"
 #import "SpotifyManager.h"
 #import "TrackCell.h"
+#import <QuartzCore/QuartzCore.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <MessageUI/MessageUI.h>
 

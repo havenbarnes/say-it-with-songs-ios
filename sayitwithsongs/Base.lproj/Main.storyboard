@@ -424,7 +424,7 @@ IAo
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sbTrackCell" id="GPV-zt-fZb" customClass="TrackCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sbTrackCell" id="GPV-zt-fZb" customClass="TrackCell">
                                         <rect key="frame" x="0.0" y="322" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GPV-zt-fZb" id="jXo-eH-wVL">

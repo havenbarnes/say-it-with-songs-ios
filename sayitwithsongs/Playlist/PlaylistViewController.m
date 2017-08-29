@@ -20,7 +20,9 @@
     self.linkButton.enabled = false;
     self.messageButton.enabled = false;
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 60, 0)];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
+
+
     SpotifyManager *manager = [SpotifyManager sharedInstance];
     [manager loadPlaylist:self.playlistUri completion:^(SPTPlaylistSnapshot *playlist) {
         self.playlist = playlist;
@@ -32,6 +34,10 @@
         self.linkButton.enabled = true;
         self.messageButton.enabled = true;
     }];
+}
+
+- (void)refresh {
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableView Delegate Methods
@@ -46,6 +52,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sbTrackCell" forIndexPath:indexPath];
+    UIView *backgroundView = [[UIView alloc] init];
+    backgroundView.backgroundColor = [UIColor blackColor];
+    [cell setSelectedBackgroundView:backgroundView];
+    
     SPTPartialTrack *track = self.playlist.tracksForPlayback[indexPath.row];
     cell.track = track;
     [cell initialize];
@@ -60,11 +70,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TrackCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (self.nowPlaying != cell.track) {
         self.nowPlaying = cell.track;
-        [tableView reloadData];
-        
+        NSArray *visibleCells = [tableView visibleCells];
+        for (TrackCell *visibleCell in visibleCells) {
+            [visibleCell hideNowPlaying];
+        }
+        [cell setNowPlaying];
         // Start playing track
     }
 }
