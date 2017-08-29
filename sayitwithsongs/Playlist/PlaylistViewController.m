@@ -52,9 +52,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sbTrackCell" forIndexPath:indexPath];
-    UIView *backgroundView = [[UIView alloc] init];
-    backgroundView.backgroundColor = [UIColor blackColor];
-    [cell setSelectedBackgroundView:backgroundView];
     
     SPTPartialTrack *track = self.playlist.tracksForPlayback[indexPath.row];
     cell.track = track;
@@ -70,15 +67,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TrackCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (self.nowPlaying != cell.track) {
         self.nowPlaying = cell.track;
-        NSArray *visibleCells = [tableView visibleCells];
-        for (TrackCell *visibleCell in visibleCells) {
-            [visibleCell hideNowPlaying];
-        }
-        [cell setNowPlaying];
+        [tableView reloadData];
+        
         // Start playing track
     }
 }
