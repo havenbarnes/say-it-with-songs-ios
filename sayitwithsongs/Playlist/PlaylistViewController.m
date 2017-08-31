@@ -76,6 +76,12 @@
     }
 }
 
+- (IBAction)playButtonPressed:(id)sender {
+    NSIndexPath *firstRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self tableView:self.tableView didSelectRowAtIndexPath:firstRow];
+}
+
+
 #pragma mark - Sharing / Dismissal
 
 - (IBAction)linkButtonPressed:(id)sender {

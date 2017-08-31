@@ -181,7 +181,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LrC-Hq-i6M" userLabel="Prompt">
-                                                <rect key="frame" x="34" y="314.5" width="312" height="28.5"/>
+                                                <rect key="frame" x="34" y="314.5" width="312" height="27"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="23"/>
                                                 <color key="textColor" red="0.50980392159999999" green="0.51372549020000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -194,7 +194,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-RO-g5a" userLabel="Subtitle">
-                                                <rect key="frame" x="49.5" y="376.5" width="275" height="34.5"/>
+                                                <rect key="frame" x="49.5" y="376.5" width="275" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="275" id="OCq-gg-Mue"/>
                                                 </constraints>
@@ -230,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-8B-dRV" userLabel="Title">
-                                                <rect key="frame" x="36" y="55" width="302" height="171"/>
+                                                <rect key="frame" x="36" y="55" width="302" height="163.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Say It With 
@@ -398,6 +398,9 @@ IAo
                                                     <integer key="value" value="28"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="playButtonPressed:" destination="9IB-bE-XP8" eventType="touchUpInside" id="puC-2g-00j"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8az-z3-qi1">
                                             <rect key="frame" x="172.5" y="40" width="30" height="17.5"/>

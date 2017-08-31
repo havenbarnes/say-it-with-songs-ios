@@ -54,7 +54,8 @@
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name =[c] %@", query];
         NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
         
-        if (exactResults.count == 0 && offset < 5) {
+        // Each query = 20 results, so we'll try 3 queries for exact match
+        if (exactResults.count == 0 && offset < 3) {
             int newOffset = offset + 1;
             [self search:query offset:newOffset completion:callback];
         } else {
