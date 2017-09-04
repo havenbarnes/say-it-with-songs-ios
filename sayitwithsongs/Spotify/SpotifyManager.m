@@ -16,7 +16,7 @@
     return [[NSUserDefaults standardUserDefaults] valueForKey:@kSessionUserDefaultsKey];
 }
 
-+ (id)sharedInstance {
++ (SpotifyManager *)sharedInstance {
     static SpotifyManager *current = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -36,7 +36,8 @@
     self.player.delegate = self;
     NSError *audioStreamingError;
     [self.player startWithClientId:self.auth.clientID error:&audioStreamingError];
-    
+    [self.player loginWithAccessToken:self.auth.session.accessToken];
+
     [self.delegate spotifyAuthenticated:[self.auth.session isValid]
                                    auth:self.auth];
 }
@@ -55,7 +56,7 @@
         NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
         
         // Each query = 20 results, so we'll try 3 queries for exact match
-        if (exactResults.count == 0 && offset < 3) {
+        if (exactResults.count == 0 && offset < 5) {
             int newOffset = offset + 1;
             [self search:query offset:newOffset completion:callback];
         } else {

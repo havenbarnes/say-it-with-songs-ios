@@ -16,11 +16,13 @@
 
 @interface PlaylistViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property SPTPlaylistSnapshot *playlist;
-@property NSURL *playlistUri;
+// Spotify Data
+@property (nonatomic, strong) SPTPlaylistSnapshot *playlist;
+@property (nonatomic, strong) NSURL *playlistUri;
+@property (nonatomic, strong) SPTAudioStreamingController *player;
+@property (nonatomic, strong) SPTPartialTrack *nowPlaying;
 
-@property SPTPartialTrack *nowPlaying;
-
+// UI
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *linkButton;
 @property (weak, nonatomic) IBOutlet UIButton *messageButton;

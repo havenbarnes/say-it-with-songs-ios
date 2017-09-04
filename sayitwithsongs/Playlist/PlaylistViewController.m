@@ -17,12 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupUI];
+    [self load];
+}
+
+- (void)setupUI {
     self.linkButton.enabled = false;
     self.messageButton.enabled = false;
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 60, 0)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
+    self.player = [SpotifyManager sharedInstance].player;
+}
 
-
+- (void)load {
     SpotifyManager *manager = [SpotifyManager sharedInstance];
     [manager loadPlaylist:self.playlistUri completion:^(SPTPlaylistSnapshot *playlist) {
         self.playlist = playlist;
@@ -73,6 +80,14 @@
         [tableView reloadData];
         
         // Start playing track
+        [self.player playSpotifyURI:self.playlist.playableUri.absoluteString
+                  startingWithIndex:indexPath.row
+               startingWithPosition:0
+                           callback:^(NSError *error) {
+            if (error) {
+                NSLog(@"Error playing track: %@", error.localizedDescription);
+            }
+        }];
     }
 }
 
@@ -94,8 +109,6 @@
     hud.mode = MBProgressHUDModeText;
     hud.label.text = @"Link Copied!";
     [hud hideAnimated:YES afterDelay:1.0];
-    
-
 }
 
 - (IBAction)messageButtonPressed:(id)sender {
@@ -109,6 +122,11 @@
 }
 
 - (IBAction)dismissButtonPressed:(id)sender {
+    [self.player setIsPlaying:NO callback:^(NSError *error) {
+        if (error) {
+            NSLog(@"Error pausing: %@", error.localizedDescription);
+        }
+    }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

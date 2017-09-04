@@ -19,6 +19,17 @@
     self.textView.delegate = self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.hasEdited) {
+        [UIView transitionWithView:self.textView
+                          duration:0.3
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+            [self.textView setText:nil];
+        } completion:nil];
+    }
+}
+
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     if (self.hasEdited) {
         return;
