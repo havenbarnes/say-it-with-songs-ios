@@ -27,6 +27,8 @@
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 60, 0)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
     self.player = [SpotifyManager sharedInstance].player;
+    self.player.delegate = self;
+    self.player.playbackDelegate = self;
 }
 
 - (void)load {
@@ -76,9 +78,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TrackCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (self.nowPlaying != cell.track) {
-        self.nowPlaying = cell.track;
-        [tableView reloadData];
-        
         // Start playing track
         [self.player playSpotifyURI:self.playlist.playableUri.absoluteString
                   startingWithIndex:indexPath.row
@@ -89,6 +88,13 @@
             }
         }];
     }
+}
+
+- (void)audioStreaming:(SPTAudioStreamingController *)audioStreaming didChangeMetadata:(SPTPlaybackMetadata *)metadata {
+    NSUInteger currentIndex = metadata.currentTrack.indexInContext;
+    SPTPartialTrack *track = self.playlist.tracksForPlayback[currentIndex];
+    self.nowPlaying = track;
+    [self.tableView reloadData];
 }
 
 - (IBAction)playButtonPressed:(id)sender {

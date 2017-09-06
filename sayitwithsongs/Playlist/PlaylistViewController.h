@@ -14,7 +14,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <MessageUI/MessageUI.h>
 
-@interface PlaylistViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface PlaylistViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate>
 
 // Spotify Data
 @property (nonatomic, strong) SPTPlaylistSnapshot *playlist;

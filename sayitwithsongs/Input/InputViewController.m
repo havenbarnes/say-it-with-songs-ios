@@ -25,7 +25,8 @@
                           duration:0.3
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         animations:^{
-            [self.textView setText:nil];
+                            [self.textView setText:nil];
+                            [self textViewDidChange:self.textView];
         } completion:nil];
     }
 }
@@ -87,6 +88,7 @@
     if([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         
+        // Enter pressed, create playlist
         [self buildPlaylist:textView.text];
         return NO;
     }

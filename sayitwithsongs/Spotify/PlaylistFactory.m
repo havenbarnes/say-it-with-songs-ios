@@ -15,8 +15,13 @@
     NSString *cleaned = [self removePuncuation:phrase];
     NSMutableArray *words = [[self components:cleaned] mutableCopy];
     
+    __block BOOL failed = NO;
     [self findMessageTracks:words completion:^(NSArray *tracks) {
+        if (failed) {
+            return;
+        }
         if (!tracks) {
+            failed = YES;
             callback(nil);
             return;
         }
