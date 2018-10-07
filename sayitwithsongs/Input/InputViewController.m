@@ -99,7 +99,7 @@
 - (void)buildPlaylist:(NSString *)message {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"Building Playist";
+    hud.label.text = @"Building Playlist";
     
     PlaylistFactory *factory = [[PlaylistFactory alloc] init];
     [factory generatePlaylist:message completion:^(SPTPlaylistSnapshot *playlist) {

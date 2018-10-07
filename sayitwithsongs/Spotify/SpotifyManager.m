@@ -13,7 +13,7 @@
 
 /// Checks for
 - (BOOL)isLoggedIn {
-    return [[NSUserDefaults standardUserDefaults] valueForKey:@kSessionUserDefaultsKey];
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@kSessionUserDefaultsKey] == nil;
 }
 
 + (SpotifyManager *)sharedInstance {

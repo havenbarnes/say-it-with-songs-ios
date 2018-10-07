@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Glj-wI-Mti">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Glj-wI-Mti">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,21 +30,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="14p-TE-dVe" userLabel="Title">
-                                <rect key="frame" x="36" y="55" width="303" height="171"/>
+                                <rect key="frame" x="42" y="75" width="291.5" height="219.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Say It With 
 </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Songs">
                                         <attributes>
                                             <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -54,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-L5-jJ1">
-                                <rect key="frame" x="58" y="305.5" width="259" height="56"/>
+                                <rect key="frame" x="58" y="339.5" width="259" height="56"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.72549019607843135" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="MAh-ZP-M5h"/>
@@ -80,7 +78,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYr-14-ynq" userLabel="Subtitle">
-                                <rect key="frame" x="58" y="377.5" width="259" height="34.5"/>
+                                <rect key="frame" x="58" y="411.5" width="259" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <color key="textColor" red="0.50980392156862742" green="0.51372549019607838" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,14 +86,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090544335544109344" green="0.094088979065418243" blue="0.098315708339214325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="14p-TE-dVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="3IN-z4-fwZ"/>
+                            <constraint firstItem="14p-TE-dVe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="3IN-z4-fwZ"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="trailing" secondItem="NwN-L5-jJ1" secondAttribute="trailing" id="5RJ-JG-Hvg"/>
-                            <constraint firstItem="NwN-L5-jJ1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9J9-Gj-SzH"/>
+                            <constraint firstItem="NwN-L5-jJ1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="34" id="9J9-Gj-SzH"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="leading" secondItem="NwN-L5-jJ1" secondAttribute="leading" id="Lgs-7H-yoH"/>
                             <constraint firstItem="NwN-L5-jJ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="P4k-Nn-uGw"/>
                             <constraint firstItem="gYr-14-ynq" firstAttribute="top" secondItem="NwN-L5-jJ1" secondAttribute="bottom" constant="16" id="XAu-fc-zQx"/>
+                            <constraint firstItem="14p-TE-dVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="apt-UP-A0o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NwN-L5-jJ1" secondAttribute="trailing" constant="42" id="jKy-N6-LtB"/>
-                            <constraint firstAttribute="trailing" secondItem="14p-TE-dVe" secondAttribute="trailing" constant="36" id="qzB-jC-8A6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="14p-TE-dVe" secondAttribute="trailing" constant="36" id="qzB-jC-8A6"/>
                             <constraint firstItem="14p-TE-dVe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="55" id="wTu-Dz-5JL"/>
                         </constraints>
                     </view>
@@ -117,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-1P-VBG">
-                                <rect key="frame" x="32" y="55" width="311" height="171"/>
+                                <rect key="frame" x="36" y="95" width="303" height="171"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Say It With 
@@ -141,9 +140,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="leading" secondItem="ZT9-xE-gyP" secondAttribute="leadingMargin" constant="16" id="2X1-o6-DF5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZLD-1P-VBG" secondAttribute="trailing" constant="16" id="SdA-pb-1Mr"/>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="35" id="lT5-Bk-4BX"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZLD-1P-VBG" secondAttribute="trailing" constant="36" id="9po-g9-rak"/>
+                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="leading" secondItem="ZT9-xE-gyP" secondAttribute="leading" constant="36" id="BuZ-mr-kSU"/>
+                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="centerX" secondItem="ZT9-xE-gyP" secondAttribute="centerX" id="WW7-bC-vut"/>
+                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="75" id="lT5-Bk-4BX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -163,14 +163,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-Po-MUr" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-Po-MUr" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-LO-pY7">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-1y-odp">
-                                                <rect key="frame" x="28" y="314.5" width="318" height="38"/>
+                                                <rect key="frame" x="28" y="334.5" width="319" height="38"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.25518366694450378" green="0.72579854726791382" blue="0.33793830871582031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -181,20 +181,20 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LrC-Hq-i6M" userLabel="Prompt">
-                                                <rect key="frame" x="34" y="314.5" width="312" height="27"/>
+                                                <rect key="frame" x="34" y="334.5" width="313" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="23"/>
                                                 <color key="textColor" red="0.50980392159999999" green="0.51372549020000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvv-gl-5Rz" userLabel="Underline">
-                                                <rect key="frame" x="28" y="354.5" width="318" height="2"/>
+                                                <rect key="frame" x="28" y="374.5" width="319" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="Qkb-ja-Kin"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say It With Songs will only work with Spotify Premium Accounts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-RO-g5a" userLabel="Subtitle">
-                                                <rect key="frame" x="49.5" y="376.5" width="275" height="33"/>
+                                                <rect key="frame" x="50" y="397" width="275" height="34.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="275" id="OCq-gg-Mue"/>
                                                 </constraints>
@@ -203,7 +203,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spR-TJ-VKT">
-                                                <rect key="frame" x="127.5" y="602" width="120" height="40"/>
+                                                <rect key="frame" x="127.5" y="537" width="120" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="jC5-Lg-LHz"/>
@@ -230,21 +230,21 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-8B-dRV" userLabel="Title">
-                                                <rect key="frame" x="36" y="55" width="302" height="163.5"/>
+                                                <rect key="frame" x="42" y="55" width="291.5" height="219.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Say It With 
 </string>
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="Songs">
                                                         <attributes>
                                                             <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
@@ -257,9 +257,9 @@
                                             <constraint firstItem="bTr-1y-odp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aAR-8B-dRV" secondAttribute="bottom" constant="40" id="0V4-5C-fVL"/>
                                             <constraint firstItem="spR-TJ-VKT" firstAttribute="centerX" secondItem="wl5-LO-pY7" secondAttribute="centerX" id="35b-3g-MNs"/>
                                             <constraint firstItem="aAR-8B-dRV" firstAttribute="top" secondItem="wl5-LO-pY7" secondAttribute="top" constant="55" id="7jO-JM-ZtA"/>
-                                            <constraint firstItem="aAR-8B-dRV" firstAttribute="leading" secondItem="wl5-LO-pY7" secondAttribute="leading" constant="36" id="Az4-gV-WUS"/>
+                                            <constraint firstItem="aAR-8B-dRV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wl5-LO-pY7" secondAttribute="leading" constant="36" id="Az4-gV-WUS"/>
                                             <constraint firstItem="Wvv-gl-5Rz" firstAttribute="leading" secondItem="bTr-1y-odp" secondAttribute="leading" id="FA4-qP-UPY"/>
-                                            <constraint firstAttribute="trailing" secondItem="aAR-8B-dRV" secondAttribute="trailing" constant="36" id="IhF-O8-qcC"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aAR-8B-dRV" secondAttribute="trailing" constant="36" id="IhF-O8-qcC"/>
                                             <constraint firstAttribute="trailing" secondItem="bTr-1y-odp" secondAttribute="trailing" constant="28" id="K2G-zq-5Qy"/>
                                             <constraint firstItem="bTr-1y-odp" firstAttribute="leading" secondItem="wl5-LO-pY7" secondAttribute="leading" constant="28" id="Mo4-IN-kk9"/>
                                             <constraint firstItem="LrC-Hq-i6M" firstAttribute="top" secondItem="bTr-1y-odp" secondAttribute="top" id="RtG-QD-sbF"/>
@@ -267,43 +267,32 @@
                                             <constraint firstItem="LrC-Hq-i6M" firstAttribute="leading" secondItem="bTr-1y-odp" secondAttribute="leading" constant="6" id="ULx-wo-5Ka"/>
                                             <constraint firstItem="Wvv-gl-5Rz" firstAttribute="trailing" secondItem="bTr-1y-odp" secondAttribute="trailing" id="VIV-e2-oae"/>
                                             <constraint firstItem="Bsi-RO-g5a" firstAttribute="top" secondItem="bTr-1y-odp" secondAttribute="bottom" constant="24.5" id="XSC-83-dRe"/>
-                                            <constraint firstItem="bTr-1y-odp" firstAttribute="centerY" secondItem="wl5-LO-pY7" secondAttribute="centerY" id="bnl-zL-iCV"/>
+                                            <constraint firstItem="bTr-1y-odp" firstAttribute="centerY" secondItem="wl5-LO-pY7" secondAttribute="centerY" constant="30" id="bnl-zL-iCV"/>
                                             <constraint firstItem="LrC-Hq-i6M" firstAttribute="trailing" secondItem="bTr-1y-odp" secondAttribute="trailing" id="hKu-ay-H5x"/>
-                                            <constraint firstAttribute="bottom" secondItem="spR-TJ-VKT" secondAttribute="bottom" constant="24" id="hVD-bl-0fL"/>
                                             <constraint firstItem="Bsi-RO-g5a" firstAttribute="centerX" secondItem="bTr-1y-odp" secondAttribute="centerX" id="hWb-lb-oOF"/>
+                                            <constraint firstItem="aAR-8B-dRV" firstAttribute="centerX" secondItem="wl5-LO-pY7" secondAttribute="centerX" id="k2I-lD-FDk"/>
+                                            <constraint firstAttribute="bottom" secondItem="spR-TJ-VKT" secondAttribute="bottom" constant="70" id="uyE-Zz-zBx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="top" id="3lZ-rs-lKZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="wl5-LO-pY7" secondAttribute="bottom" id="6S8-R6-Qc7"/>
+                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="width" secondItem="xy0-Po-MUr" secondAttribute="width" id="D2c-cL-5Qc"/>
                                     <constraint firstItem="wl5-LO-pY7" firstAttribute="centerX" secondItem="xy0-Po-MUr" secondAttribute="centerX" id="Gum-rq-xt8"/>
+                                    <constraint firstAttribute="bottom" secondItem="wl5-LO-pY7" secondAttribute="bottom" id="Nmw-h2-jzJ"/>
+                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="height" secondItem="xy0-Po-MUr" secondAttribute="height" id="Zki-RM-okJ"/>
                                     <constraint firstItem="wl5-LO-pY7" firstAttribute="centerY" secondItem="xy0-Po-MUr" secondAttribute="centerY" id="c3Q-rx-Kmw"/>
+                                    <constraint firstItem="wl5-LO-pY7" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="top" id="gwy-Dj-kd1"/>
                                     <constraint firstAttribute="trailing" secondItem="wl5-LO-pY7" secondAttribute="trailing" id="lg1-Bd-2eK"/>
                                     <constraint firstItem="wl5-LO-pY7" firstAttribute="leading" secondItem="xy0-Po-MUr" secondAttribute="leading" id="urd-xt-J9b"/>
                                 </constraints>
                             </scrollView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-Mg-8BV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d1G-iL-O7e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="2ee-hG-fHi"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FPp-xo-srR" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="bottom" id="Mqw-Ja-nbq"/>
+                            <constraint firstItem="xy0-Po-MUr" firstAttribute="top" secondItem="NBo-yW-IAM" secondAttribute="bottom" id="L1g-az-u0I"/>
                             <constraint firstAttribute="trailing" secondItem="xy0-Po-MUr" secondAttribute="trailing" id="e0g-qm-mqL"/>
                             <constraint firstItem="xy0-Po-MUr" firstAttribute="leading" secondItem="Qdn-WQ-3Rq" secondAttribute="leading" id="e9v-zg-Uun"/>
-                            <constraint firstItem="Dst-Mg-8BV" firstAttribute="top" secondItem="Qdn-WQ-3Rq" secondAttribute="topMargin" id="gjf-cA-DDM"/>
-                            <constraint firstItem="xy0-Po-MUr" firstAttribute="top" secondItem="Qdn-WQ-3Rq" secondAttribute="top" id="jrv-QS-2ds"/>
-                            <constraint firstItem="Dst-Mg-8BV" firstAttribute="leading" secondItem="Qdn-WQ-3Rq" secondAttribute="leading" id="pjz-jg-C7h"/>
-                            <constraint firstAttribute="trailing" secondItem="Dst-Mg-8BV" secondAttribute="trailing" id="yrB-2H-XzT"/>
+                            <constraint firstItem="FPp-xo-srR" firstAttribute="top" secondItem="xy0-Po-MUr" secondAttribute="bottom" id="oYh-Eh-oxv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -316,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgL-Oo-uy6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852.17391304347836" y="198.09782608695653"/>
+            <point key="canvasLocation" x="808.79999999999995" y="197.29064039408868"/>
         </scene>
         <!--Playlist View Controller-->
         <scene sceneID="hZI-Ta-NJQ">
@@ -338,7 +327,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-0x-Gas" userLabel="Title">
-                                            <rect key="frame" x="36" y="55" width="303" height="171"/>
+                                            <rect key="frame" x="41.5" y="55" width="292" height="171"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Now You've">
                                                     <attributes>
@@ -403,9 +392,9 @@ IAo
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8az-z3-qi1">
-                                            <rect key="frame" x="172.5" y="40" width="30" height="17.5"/>
+                                            <rect key="frame" x="172.5" y="40" width="30" height="14"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="8az-z3-qi1" secondAttribute="height" multiplier="71:41" id="fHO-aB-wwh"/>
+                                                <constraint firstAttribute="height" constant="14" id="NnD-4c-JDM"/>
                                                 <constraint firstAttribute="width" constant="30" id="pQc-lp-2Tc"/>
                                             </constraints>
                                             <state key="normal" image="carrot"/>
@@ -416,11 +405,12 @@ IAo
                                     </subviews>
                                     <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="4hx-0x-Gas" firstAttribute="leading" secondItem="f85-lK-cRC" secondAttribute="leading" constant="36" id="026-iH-zmx"/>
+                                        <constraint firstItem="4hx-0x-Gas" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f85-lK-cRC" secondAttribute="leading" constant="36" id="026-iH-zmx"/>
                                         <constraint firstItem="8az-z3-qi1" firstAttribute="centerX" secondItem="f85-lK-cRC" secondAttribute="centerX" id="1TK-z6-S6P"/>
                                         <constraint firstItem="8az-z3-qi1" firstAttribute="top" secondItem="f85-lK-cRC" secondAttribute="top" constant="40" id="Egk-wU-N5w"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="aXX-7S-5WU" secondAttribute="trailing" constant="42" id="GXo-yz-BWy"/>
-                                        <constraint firstAttribute="trailing" secondItem="4hx-0x-Gas" secondAttribute="trailing" constant="36" id="UMB-O5-XHW"/>
+                                        <constraint firstItem="4hx-0x-Gas" firstAttribute="centerX" secondItem="f85-lK-cRC" secondAttribute="centerX" id="Lvg-aa-VuX"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4hx-0x-Gas" secondAttribute="trailing" constant="36" id="UMB-O5-XHW"/>
                                         <constraint firstItem="aXX-7S-5WU" firstAttribute="leading" secondItem="f85-lK-cRC" secondAttribute="leadingMargin" constant="42" id="pAh-Kz-k39"/>
                                         <constraint firstItem="aXX-7S-5WU" firstAttribute="top" secondItem="4hx-0x-Gas" secondAttribute="bottom" constant="16" id="pBD-Sn-nsq"/>
                                         <constraint firstItem="4hx-0x-Gas" firstAttribute="top" secondItem="f85-lK-cRC" secondAttribute="top" constant="55" id="wRV-6F-3OM"/>
@@ -435,19 +425,19 @@ IAo
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-A4-Lh7">
-                                                    <rect key="frame" x="24" y="14" width="281" height="21"/>
+                                                    <rect key="frame" x="31" y="17" width="267" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist • Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsC-fs-cJm">
-                                                    <rect key="frame" x="24" y="37.5" width="281" height="17.5"/>
+                                                    <rect key="frame" x="31" y="34.5" width="267" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                     <color key="textColor" red="0.6105794951229222" green="0.6141831193807793" blue="0.64205266497461921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-No-ngF" userLabel="Now Playing Container">
-                                                    <rect key="frame" x="321" y="17.5" width="30" height="30"/>
+                                                    <rect key="frame" x="314" y="17.5" width="30" height="30"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zls-O1-U0C">
                                                             <rect key="frame" x="0.0" y="0.0" width="8" height="30"/>
@@ -501,7 +491,7 @@ IAo
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tm0-45-xcM">
-                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6fM-8o-RM0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
