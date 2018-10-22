@@ -44,7 +44,7 @@
 
 - (void)search:(NSString *)query offset:(int)offset completion:(void(^)(SPTPartialTrack *))callback {
     NSString *accessToken = [SPTAuth defaultInstance].session.accessToken;
-    
+
     [SPTSearch performSearchWithQuery:query queryType:SPTQueryTypeTrack offset:offset accessToken:accessToken callback:^(NSError *error, id object) {
         
         if (error) {
@@ -55,12 +55,13 @@
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name =[c] %@", query];
         NSArray *exactResults = [results filteredArrayUsingPredicate:predicate];
         
-        // Each query = 20 results, so we'll try 3 queries for exact match
-        if (exactResults.count == 0 && offset < 5) {
-            int newOffset = offset + 1;
+        // Each query = 20 results, so we'll try 5 queries for exact match
+        if (exactResults.count == 0 && offset <= 100) {
+            int newOffset = offset + 20;
             [self search:query offset:newOffset completion:callback];
         } else {
             callback(exactResults.firstObject);
+            return;
         }
     }];
 }

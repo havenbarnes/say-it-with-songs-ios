@@ -12,11 +12,11 @@
 
 /// Takes a phrase and attempts to generate a SPTPlaylistSnapshot which it returns in a callback
 - (void)generatePlaylist:(NSString *)phrase completion:(void(^)(SPTPlaylistSnapshot *))callback {
-    NSString *cleaned = [self removePuncuation:phrase];
-    NSMutableArray *words = [[self components:cleaned] mutableCopy];
+//    NSString *cleaned = [self removePuncuation:phrase];
+    NSMutableArray *words = [[self components: phrase] mutableCopy];
     
     __block BOOL failed = NO;
-    [self findMessageTracks:words completion:^(NSArray *tracks) {
+    [self findMessageTracksV2:words completion:^(NSArray *tracks) {
         if (failed) {
             return;
         }
@@ -93,53 +93,41 @@
     }
 }
 
-#pragma TODO: Finish recursive sliding window
-/// Finds tracks to represent the message using a sliding window algorithm
-- (void)findMessageTracks:(NSArray *)words existingTracks:(NSMutableArray *)existingTracks
-               startIndex:(int)start depth:(int)depth completion:(void(^)(NSArray *))callback {
-    NSMutableArray *tracks;
-    if (existingTracks) {
-        tracks = existingTracks;
-    } else {
-        tracks = [[NSMutableArray alloc] init];
+- (void)findMessageTracksV2:(NSArray *)words completion:(void(^)(NSArray *))callback {
+    NSMutableArray *tracks = [[NSMutableArray alloc] init];
+    [self findMessageTracksV2Recursive:[words mutableCopy] current:[words mutableCopy] tracks:tracks completion:^(NSArray *result) {
+        callback(result);
+    }];
+}
+
+- (void)findMessageTracksV2Recursive:(NSMutableArray *)words
+                             current:(NSMutableArray *)currentWords
+                              tracks:(NSMutableArray *)tracks
+                          completion:(void(^)(NSArray *))callback {
+    // Stopping conditions
+    if (words.count == 0) {
+        callback(tracks);
+        return;
     }
-    
-    __block int startIndex = start;
-    __block int lengthToFind = depth;
-    
-    NSString *query = [self join:words start:startIndex length:lengthToFind];
-    
+
     SpotifyManager *manager = [SpotifyManager sharedInstance];
+    NSString *query = [currentWords componentsJoinedByString:@" "];
+
     [manager search:query offset:0 completion:^(SPTPartialTrack *track) {
         if (track) {
-            int remaining = (int) words.count - (lengthToFind + startIndex);
-            startIndex = lengthToFind + remaining;
-            lengthToFind = (int) words.count - startIndex;
+            // Move on to rest of playlist
             [tracks addObject:track];
-            
-            if (remaining == 0) {
-                callback(tracks);
-            } else {
-                [self findMessageTracks:words
-                         existingTracks:tracks
-                             startIndex:startIndex
-                                  depth:lengthToFind
-                             completion:callback];
-            }
+            [words removeObjectsInArray:currentWords];
+            [self findMessageTracksV2Recursive:[words mutableCopy] current:[words mutableCopy] tracks:tracks completion:callback];
         } else {
-            lengthToFind--;
-            if (lengthToFind == 0) {
+            // Make currentWords smaller / more specific
+            [currentWords removeObjectAtIndex:currentWords.count - 1];
+            if (currentWords.count == 0) {
                 callback(nil);
-                return;
             }
-            [self findMessageTracks:words
-                     existingTracks:tracks
-                         startIndex:startIndex
-                              depth:lengthToFind
-                         completion:callback];
+            [self findMessageTracksV2Recursive:[words mutableCopy] current:[currentWords mutableCopy] tracks:tracks completion:callback];
         }
     }];
-    
 }
 
 /// Creates Spotify Playlist and adds predetermined tracks to it. Returns created playlist
@@ -158,7 +146,7 @@
     }];
 }
 
-/// Adds all tracks to playlist with
+/// Adds all tracks to playlist at once
 - (void)addTracksToPlaylist:(NSArray *)tracks
                    playlist:(SPTPlaylistSnapshot *)playlist
                  completion:(void(^)(void))callback  {

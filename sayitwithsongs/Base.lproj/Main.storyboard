@@ -115,22 +115,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-1P-VBG">
-                                <rect key="frame" x="36" y="95" width="303" height="171"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="orl-jg-MrQ" userLabel="Title">
+                                <rect key="frame" x="42" y="75" width="291.5" height="219.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Say It With 
 </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Songs">
                                         <attributes>
                                             <color key="NSColor" red="0.25518000000000002" green="0.7258" blue="0.33794000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="70" name="Montserrat-Bold"/>
+                                            <font key="NSFont" size="90" name="Montserrat-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -140,16 +140,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090544335540000007" green="0.094088979069999995" blue="0.098315708340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZLD-1P-VBG" secondAttribute="trailing" constant="36" id="9po-g9-rak"/>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="leading" secondItem="ZT9-xE-gyP" secondAttribute="leading" constant="36" id="BuZ-mr-kSU"/>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="centerX" secondItem="ZT9-xE-gyP" secondAttribute="centerX" id="WW7-bC-vut"/>
-                            <constraint firstItem="ZLD-1P-VBG" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="75" id="lT5-Bk-4BX"/>
+                            <constraint firstItem="orl-jg-MrQ" firstAttribute="centerX" secondItem="ZT9-xE-gyP" secondAttribute="centerX" id="JbT-Ag-7ma"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="orl-jg-MrQ" secondAttribute="trailing" constant="36" id="Nig-98-341"/>
+                            <constraint firstItem="orl-jg-MrQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZT9-xE-gyP" secondAttribute="leading" constant="36" id="VJB-Nf-bYQ"/>
+                            <constraint firstItem="orl-jg-MrQ" firstAttribute="top" secondItem="GbD-YG-OVG" secondAttribute="bottom" constant="55" id="X5E-G1-3N7"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O85-4h-Zqh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582" y="205"/>
+            <point key="canvasLocation" x="-583.20000000000005" y="204.64767616191907"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="2BK-74-Xtw">
